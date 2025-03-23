@@ -1,19 +1,24 @@
-import { signInWithPopup } from "firebase/auth";
-import { auth, provider } from "../firebase";
+import { auth, googleProvider } from "../firebase";
+import { signInWithPopup, signOut } from "firebase/auth";
 
-const signInWithGoogle = async () => {
-  try {
-    const result = await signInWithPopup(auth, provider);
-    console.log(result.user);
-  } catch (error) {
-    console.error("Error signing in:", error);
-  }
-};
+const Auth = ({ user, setUser }) => {
+  const handleLogin = async () => {
+    const result = await signInWithPopup(auth, googleProvider);
+    setUser(result.user);
+  };
 
-export default function Auth() {
   return (
     <div>
-      <button onClick={signInWithGoogle}>Sign in with Google</button>
+      {user ? (
+        <>
+          <p>Welcome, {user.displayName}</p>
+          <button onClick={() => signOut(auth)}>Logout</button>
+        </>
+      ) : (
+        <button onClick={handleLogin}>Sign in with Google</button>
+      )}
     </div>
   );
-}
+};
+
+export default Auth;

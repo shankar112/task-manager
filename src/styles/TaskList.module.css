@@ -1,0 +1,25 @@
+.task-list {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .task-item {
+    background: white;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .drag-handle {
+    cursor: grab;
+  }
+  
+  .task-header {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+  

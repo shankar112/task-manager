@@ -69,3 +69,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 "# task-manager" 
+
+# Task Management App
+
+## Features
+- Google Authentication (Firebase)
+- Task CRUD operations
+- Drag-and-drop reordering
+- Board/List view toggle
+- Filtering & Sorting
+- File Attachments
+
+## Setup Instructions
+1. Clone the repo: `git clone https://github.com/shankar112/task-manager.git`
+2. Install dependencies: `npm install`
+3. Add Firebase config in `.env`
+4. Run the app: `npm start`
+
+## Deployment
+[Live App](<DEPLOYMENT_URL>)
+
+## Design Reference
+[Figma Design](https://www.figma.com/design/IYRypV3Qf76Qppl6knbm2U/Task-Management?node-id=0-1&t=lWNc2UtHkUC0Z5qS-1)

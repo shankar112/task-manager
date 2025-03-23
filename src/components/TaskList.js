@@ -1,24 +1,13 @@
-import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import styles from "../styles/TaskList.module.css";
 
-const TaskList = ({ tasks, onDragEnd }) => (
-  <DragDropContext onDragEnd={onDragEnd}>
-    <Droppable droppableId="tasks">
-      {(provided) => (
-        <ul {...provided.droppableProps} ref={provided.innerRef}>
-          {tasks.map((task, index) => (
-            <Draggable key={task.id} draggableId={task.id} index={index}>
-              {(provided) => (
-                <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                  {task.title}
-                </li>
-              )}
-            </Draggable>
-          ))}
-          {provided.placeholder}
-        </ul>
-      )}
-    </Droppable>
-  </DragDropContext>
-);
+const TaskList = ({ tasks }) => {
+  return (
+    <ul className={styles.list}>
+      {tasks.map((task) => (
+        <li key={task.id}>{task.title} - {task.category}</li>
+      ))}
+    </ul>
+  );
+};
 
 export default TaskList;
