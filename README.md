@@ -87,7 +87,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 4. Run the app: `npm start`
 
 ## Deployment
-[Live App](<DEPLOYMENT_URL>)
+[Live App](https://task-manager-nine-steel.vercel.app/)
 
 ## Design Reference
 [Figma Design](https://www.figma.com/design/IYRypV3Qf76Qppl6knbm2U/Task-Management?node-id=0-1&t=lWNc2UtHkUC0Z5qS-1)
